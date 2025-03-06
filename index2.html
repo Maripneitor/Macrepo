@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="auth-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="color-panel">
+            <h1 id="panel-title">¡Bienvenido!</h1>
+        </div>
+        <div class="form-container">
+            <!-- Formulario de Inicio de Sesión -->
+            <form class="form login-form">
+                <h2>Inicio de Sesión</h2>
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="login-user" required>
+                    <label for="login-user">Usuario</label>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="login-pass" required>
+                    <label for="login-pass">Contraseña</label>
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+                <div class="toggle-link">
+                    <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+                    <p>¿Quieres regresar al inicio? <a href="index.html">Volver al inicio</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,271 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1ea;
+    
+    color: #5a3e36;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el footer esté siempre abajo */
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #8b7355;
+    color: white;
+}
+
+/* Botón de menú hamburguesa */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Logo y eslogan */
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+/* Iconos de usuario y carrito */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre iconos */
+}
+
+.icons i {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Menú desplegable */
+.sidebar {
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #5a3e36;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* Botón de cierre del menú */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    color: #f4f1ea; /* Cambio de color al pasar el ratón */
+}
+
+/* Contenido principal */
+main {
+    flex: 1; /* Ocupa el espacio restante */
+    padding: 20px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.text {
+    opacity: 0;
+    transition: opacity 1s ease;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text.fade-in {
+    opacity: 1;
+}
+
+/* Pie de página */
+footer {
+    background-color: #8b7355;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: auto; /* Asegura que el footer esté siempre abajo */
+}
+
+.coffee-trees img {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.coffee-trees img:first-child {
+    left: 0;
+}
+
+.coffee-trees img:last-child {
+    right: 0;
+}
+
+/* Estilos para el formulario de inicio de sesión y registro */
+.login-container {
+    max-width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #8b7355, #5a3e36); /* Degradado */
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Bordes más redondeados */
+    box-sizing: border-box; /* Asegura que no sobresalgan */
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: #5a3e36;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #f4f1ea;
+}
+
+.login-container p {
+    margin-top: 15px;
+}
+
+.login-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Iconos en los campos del formulario */
+.input-icon {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-icon i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5a3e36;
+}
+
+.input-icon input {
+    padding-left: 30px; /* Espacio para el ícono */
+}
+
+/* Estilos para el carrito */
+.cart-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.item-controls button:hover {
+    color: #8b7355;
+}
+
+/* Enlace de retorno a la página principal */
+.return-link {
+    display: block;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.return-link:hover {
+    text-decoration: underline;
+}

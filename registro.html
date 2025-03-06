@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="auth-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="color-panel">
+            <h1 id="panel-title">¡Regístrate!</h1>
+        </div>
+        <div class="form-container">
+            <!-- Formulario de Registro -->
+            <form class="form register-form" id="register-form">
+                <h2>Registro</h2>
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="reg-user" required>
+                    <label for="reg-user">Nombre de usuario</label>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="reg-email" required>
+                    <label for="reg-email">Correo electrónico</label>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="reg-pass" required>
+                    <label for="reg-pass">Contraseña</label>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="reg-confirm-pass" required>
+                    <label for="reg-confirm-pass">Confirmar contraseña</label>
+                </div>
+                <button type="submit">Registrarse</button>
+                <div class="toggle-link">
+                    <p>¿Ya tienes cuenta? <a href="index2.html">Inicia sesión aquí</a></p>
+                    <p>¿Quieres regresar al inicio? <a href="index.html">Volver al inicio</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Cambiar el texto de bienvenida después del registro
+        document.getElementById('register-form').addEventListener('submit', (e) => {
+            e.preventDefault(); // Evita que el formulario se envíe
+
+            // Cambia el texto de bienvenida
+            const panelTitle = document.getElementById('panel-title');
+            panelTitle.textContent = "¡Bienvenido, Usuario!";
+
+            // Aquí podrías agregar lógica para enviar los datos del formulario al servidor
+        });
+    </script>
+</body>
+</html>
