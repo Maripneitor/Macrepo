@@ -11,8 +11,13 @@
     <div class="container">
         <div class="color-panel">
             <h1 id="panel-title">¡Regístrate!</h1>
+            <!-- Botón de regreso a casa -->
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
         </div>
         <div class="form-container">
+            
             <!-- Formulario de Registro -->
             <form class="form register-form" id="register-form">
                 <h2>Registro</h2>
@@ -38,24 +43,12 @@
                 </div>
                 <button type="submit">Registrarse</button>
                 <div class="toggle-link">
-                    <p>¿Ya tienes cuenta? <a href="index2.html">Inicia sesión aquí</a></p>
-                    <p>¿Quieres regresar al inicio? <a href="index.html">Volver al inicio</a></p>
+                    <p>¿Ya tienes cuenta? <a href="index2.html" id="show-login">Inicia sesión aquí</a></p>
                 </div>
             </form>
         </div>
     </div>
 
-    <script>
-        // Cambiar el texto de bienvenida después del registro
-        document.getElementById('register-form').addEventListener('submit', (e) => {
-            e.preventDefault(); // Evita que el formulario se envíe
-
-            // Cambia el texto de bienvenida
-            const panelTitle = document.getElementById('panel-title');
-            panelTitle.textContent = "¡Bienvenido, Usuario!";
-
-            // Aquí podrías agregar lógica para enviar los datos del formulario al servidor
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

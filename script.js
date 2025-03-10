@@ -4,13 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');
 
-    menuIcon.addEventListener('click', function() {
-        sidebar.classList.toggle('active');
-    });
+    if (menuIcon && sidebar && closeBtn) {
+        menuIcon.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+        });
 
-    closeBtn.addEventListener('click', function() {
-        sidebar.classList.remove('active');
-    });
+        closeBtn.addEventListener('click', function() {
+            sidebar.classList.remove('active');
+        });
+    }
 
     // Efecto fade-in para los textos
     const texts = document.querySelectorAll('.text');
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('login-form');
     const registerForm = document.getElementById('register-form');
 
-    if (showRegister && showLogin) {
+    if (showRegister && showLogin && loginForm && registerForm) {
         showRegister.addEventListener('click', function(e) {
             e.preventDefault();
             loginForm.classList.add('hidden');
@@ -47,4 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
             loginForm.classList.remove('hidden');
         });
     }
+
+    // Animación de desplazamiento al cambiar de página
+    const container = document.querySelector('.container');
+    if (container) {
+        container.classList.add('slide-in');
+    }
+
+    window.addEventListener('beforeunload', function() {
+        if (container) {
+            container.classList.add('slide-out');
+        }
+    });
 });

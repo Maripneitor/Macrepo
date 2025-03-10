@@ -4,14 +4,18 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f1ea;
-    
     color: #5a3e36;
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Asegura que el footer esté siempre abajo */
+    position: relative;
 }
 
-/* Encabezado */
+header, main, footer {
+    position: relative;
+    z-index: 2;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -21,7 +25,6 @@ header {
     color: white;
 }
 
-/* Botón de menú hamburguesa */
 .menu-icon {
     display: flex;
     flex-direction: column;
@@ -35,16 +38,28 @@ header {
     margin: 4px 0;
 }
 
-/* Logo y eslogan */
 .logo {
-    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.logo-text h1 {
+    font-family: 'Shadows Into Light', cursive;
+    
+    letter-spacing: 2cap; /* Ajusta este valor para reducir el espacio entre letras */
 }
 
+.logo-text p {
+    letter-spacing: 1px; /* Ajusta este valor para reducir el espacio entre letras */
+}
 .logo img {
     width: 100px;
+    height: 80px;
+    margin-right: 20px;
+}
+.logo-text h1 {
+    letter-spacing: 8px; /* Ajusta este valor para cambiar el espacio entre letras */
 }
 
-/* Iconos de usuario y carrito */
 .icons {
     display: flex;
     align-items: center;
@@ -57,7 +72,6 @@ header {
     cursor: pointer;
 }
 
-/* Menú desplegable */
 .sidebar {
     height: 100vh; /* Ocupa toda la altura de la pantalla */
     width: 250px;
@@ -74,7 +88,6 @@ header {
     left: 0;
 }
 
-/* Botón de cierre del menú */
 .close-btn {
     position: absolute;
     top: 10px;
@@ -104,10 +117,12 @@ header {
     color: #f4f1ea; /* Cambio de color al pasar el ratón */
 }
 
-/* Contenido principal */
 main {
     flex: 1; /* Ocupa el espacio restante */
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .text-container {
@@ -115,6 +130,8 @@ main {
     flex-direction: column;
     gap: 30px;
     margin-top: 50px;
+    max-width: 800px;
+    text-align: center;
 }
 
 .text {
@@ -130,7 +147,6 @@ main {
     opacity: 1;
 }
 
-/* Pie de página */
 footer {
     background-color: #8b7355;
     padding: 20px;
@@ -139,133 +155,13 @@ footer {
     margin-top: auto; /* Asegura que el footer esté siempre abajo */
 }
 
-.coffee-trees img {
-    width: 150px;
+.coffee-trees {
     position: absolute;
-    bottom: 0;
-}
-
-.coffee-trees img:first-child {
+    top: 0;
     left: 0;
-}
-
-.coffee-trees img:last-child {
-    right: 0;
-}
-
-/* Estilos para el formulario de inicio de sesión y registro */
-.login-container {
-    max-width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    background: linear-gradient(135deg, #8b7355, #5a3e36); /* Degradado */
-    border-radius: 20px; /* Bordes más redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: white;
-}
-
-.login-container input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px; /* Bordes más redondeados */
-    box-sizing: border-box; /* Asegura que no sobresalgan */
-}
-
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: white;
-    color: #5a3e36;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.login-container button:hover {
-    background-color: #f4f1ea;
-}
-
-.login-container p {
-    margin-top: 15px;
-}
-
-.login-container a {
-    color: white;
-    text-decoration: none;
-}
-
-.login-container a:hover {
-    text-decoration: underline;
-}
-
-/* Iconos en los campos del formulario */
-.input-icon {
-    position: relative;
-    margin-bottom: 15px;
-}
-
-.input-icon i {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #5a3e36;
-}
-
-.input-icon input {
-    padding-left: 30px; /* Espacio para el ícono */
-}
-
-/* Estilos para el carrito */
-.cart-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-.cart-item:last-child {
-    border-bottom: none;
-}
-
-.item-controls {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.item-controls button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.item-controls button:hover {
-    color: #8b7355;
-}
-
-/* Enlace de retorno a la página principal */
-.return-link {
-    display: block;
-    margin-top: 20px;
-    color: white;
-    text-decoration: none;
-}
-
-.return-link:hover {
-    text-decoration: underline;
+    height: 100%;
+    background: url('imagenes/talloi.png') left bottom no-repeat, url('imagenes/tallo.png') right bottom no-repeat;
+    background-size: contain, contain;
+    z-index: 1;
 }

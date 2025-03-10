@@ -11,10 +11,15 @@
     <div class="container">
         <div class="color-panel">
             <h1 id="panel-title">¡Bienvenido!</h1>
+            <!-- Botón de regreso a casa -->
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
         </div>
         <div class="form-container">
+            
             <!-- Formulario de Inicio de Sesión -->
-            <form class="form login-form">
+            <form class="form login-form" id="login-form">
                 <h2>Inicio de Sesión</h2>
                 <div class="input-container">
                     <i class="fas fa-user"></i>
@@ -28,11 +33,12 @@
                 </div>
                 <button type="submit">Iniciar Sesión</button>
                 <div class="toggle-link">
-                    <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
-                    <p>¿Quieres regresar al inicio? <a href="index.html">Volver al inicio</a></p>
+                    <p>¿No tienes cuenta? <a href="registro.html" id="show-register">Regístrate aquí</a></p>
                 </div>
             </form>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
